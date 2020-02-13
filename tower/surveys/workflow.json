@@ -21,7 +21,7 @@
       "variable": "interface_name",
       "min": 0,
       "max": 1024,
-      "default": "GigabitEthernet0/2",
+      "default": "ethernet2",
       "choices": ""
     },
     {

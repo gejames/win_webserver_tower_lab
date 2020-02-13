@@ -4,10 +4,10 @@ webdemo:
     name: "Webserver Demo Project"
     scm_url: https://github.com/gejames/win_webserver_tower_lab.git
   inventory_network:
-    name: "Test Cisco Inventory"
-    group: "test_cisco_group"
+    name: "Test Network Inventory"
+    group: "test_net_group"
     switch_hostname: "switch1"
-    switch_ipaddress: "192.168.60.16"
+    switch_ipaddress: "192.168.60.15"
   inventory_winserver:
     name: "Test Winserver Inventory"
     group: "test_winserver_group"
@@ -15,16 +15,16 @@ webdemo:
     winserver_ipaddress: "192.168.60.40"
   credential:
     switch:
-      name: "Cisco Switch Login Credentials"
-      username: "cisco"
-      password: "cisco"
+      name: "Switch Login Credentials"
+      username: "arista"
+      password: "arista"
     winserver:
       name: "Winserver Login Credentials"
       username: "vagrant"
       password: "vagrant"
   templates:
-      enable_port: "Test Enable Cisco Switch Port"  
-      disable_port: "Test Disable Cisco Switch Port"
+      enable_port: "Test Enable Switch Port"  
+      disable_port: "Test Disable Switch Port"
       harden_win: "Test Harden Winserver OS"
       enable_iis: "Test Add IIS to Webserver"
       new_user: "Test Add Winserver User"

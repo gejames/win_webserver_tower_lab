@@ -61,7 +61,7 @@
         state: "{{ tower.state }}"
         tower_config_file: "{{ tower.cli_config }}"
         variables:
-           ansible_network_os: ios
+           ansible_network_os: eos
            ansible_host: "{{ webdemo.inventory_network.switch_ipaddress }}"
            
 
@@ -118,7 +118,7 @@
         job_type: "run"
         inventory: "{{ webdemo.inventory_network.name }}"
         project: "{{ webdemo.project.name }}"
-        playbook: "cisco_config_switch_port.yml"
+        playbook: "config_switch_port.yml"
         credential: "{{ webdemo.credential.switch.name }}"
         state: "{{ tower.state }}"
         survey_enabled: yes
