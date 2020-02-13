@@ -1,0 +1,12 @@
+---
+- name: Add Windows User
+  hosts: '{{ tower_win_inventory }}'
+  gather_facts: False
+
+  roles:
+    - add_single_win_user
+  
+
+
+
+

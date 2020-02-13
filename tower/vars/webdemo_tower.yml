@@ -1,0 +1,32 @@
+webdemo:
+  organization: "Default"
+  project:
+    name: "Webserver Demo Project"
+    scm_url: https://github.com/ansible-kickstart/web-server-provisioning-lab.git
+  inventory_network:
+    name: "Test Cisco Inventory"
+    group: "test_cisco_group"
+    switch_hostname: "switch1"
+    switch_ipaddress: "192.168.60.16"
+  inventory_winserver:
+    name: "Test Winserver Inventory"
+    group: "test_winserver_group"
+    winserver_hostname: "WIN2016SERVER"
+    winserver_ipaddress: "192.168.60.40"
+  credential:
+    switch:
+      name: "Cisco Switch Login Credentials"
+      username: "cisco"
+      password: "cisco"
+    winserver:
+      name: "Winserver Login Credentials"
+      username: "vagrant"
+      password: "vagrant"
+  templates:
+      enable_port: "Test Enable Cisco Switch Port"  
+      disable_port: "Test Disable Cisco Switch Port"
+      harden_win: "Test Harden Winserver OS"
+      enable_iis: "Test Add IIS to Webserver"
+      new_user: "Test Add Winserver User"
+      run_report: "Send New Server Report"
+      workflow: "Test Webdemo Workflow"

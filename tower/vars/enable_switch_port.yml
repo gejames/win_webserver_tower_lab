@@ -1,0 +1,4 @@
+tower_network_inventory: "{{ webdemo.inventory_network.switch_hostname }}"
+interface_name: GigabitEthernet0/2
+access_vlan: 20
+port_enabled: true

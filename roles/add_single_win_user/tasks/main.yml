@@ -1,0 +1,14 @@
+---
+- name: Create Win User
+  win_domain_user:
+    name: "{{ server_username }}"
+    firstname: "{{ user_firstname }}"
+    surname: "{{ user_surname }}"
+    password: "{{ user_password }}"
+    state: present
+  # email: "{{ win_user_email }}"
+  # groups: "{{win_user_groups }}"    
+
+  
+
+  

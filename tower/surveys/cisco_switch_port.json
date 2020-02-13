@@ -1,0 +1,30 @@
+{
+  "name": "",
+  "description": "",
+  "spec": [
+    {
+      "question_name": "What interface is the server on",
+      "question_description": "",
+      "required": true,
+      "type": "text",
+      "variable": "interface_name",
+      "min": 0,
+      "max": 1024,
+      "default": "GigabitEthernet1/0",
+      "choices": ""
+    },
+    {
+      "question_name": "What VLAN will the server be on?",
+      "question_description": "",
+      "required": true,
+      "type": "integer",
+      "variable": "access_vlan",
+      "min": 0,
+      "max": 100,
+      "default": 1,
+      "choices": "",
+      "new_question": true
+    }
+  ]
+}
+

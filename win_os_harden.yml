@@ -1,0 +1,11 @@
+---
+- name: Set Windows Security Policies
+  hosts: '{{ tower_win_inventory }}'
+  gather_facts: false
+  
+  roles:
+    - max_password_age
+    - system_events
+
+  
+    
