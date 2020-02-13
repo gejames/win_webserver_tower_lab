@@ -1,9 +1,9 @@
 
 !
+hostname switch1
 spanning-tree mode mstp
-!
+aaa authorization exec default local
 no aaa root
-!
 username arista privilege 15 secret arista
 !
 interface Management1

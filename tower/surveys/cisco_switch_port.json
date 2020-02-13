@@ -3,14 +3,14 @@
   "description": "",
   "spec": [
     {
-      "question_name": "What interface is the server on",
+      "question_name": "What switch interface is the server on",
       "question_description": "",
       "required": true,
       "type": "text",
       "variable": "interface_name",
       "min": 0,
       "max": 1024,
-      "default": "GigabitEthernet1/0",
+      "default": "Ethernet2",
       "choices": ""
     },
     {

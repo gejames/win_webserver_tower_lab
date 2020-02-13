@@ -28,6 +28,8 @@
       template:
         src: ./tower/templates/tower-cli.j2
         dest: ./tower/tower-cli.cfg
+
+        
      
     - name: ADD WEBSERVER PROJECT FROM GIT
       tower_project:
@@ -132,7 +134,7 @@
         job_type: "run"
         inventory: "{{ webdemo.inventory_network.name }}"
         project: "{{ webdemo.project.name }}"
-        playbook: "cisco_config_switch_port.yml"
+        playbook: "config_switch_port.yml"
         credential: "{{ webdemo.credential.switch.name }}"
         state: "{{ tower.state }}"
         survey_enabled: yes

@@ -1,18 +1,18 @@
 - project: Webserver Demo Project
   success: 
-   - job_template: Test Enable Cisco Switch Port
+   - job_template: Test Enable Switch Port
      success: 
      - job_template: Test Harden Winserver OS
        failure:
-       - job_template: Test Disable Cisco Switch Port
+       - job_template: Test Disable Switch Port
        success:
        -  job_template: Test Add IIS to Webserver
           failure:
-          - job_template: Test Disable Cisco Switch Port
+          - job_template: Test Disable Switch Port
           success:
           - job_template: Test Add Winserver User
             failure:
-            - job_template: Test Disable Cisco Switch Port
+            - job_template: Test Disable Switch Port
             always:
             - job_template: Send New Server Report
             
