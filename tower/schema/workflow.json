@@ -1,18 +1,18 @@
-- project: Webserver Demo Project
+- project: Webdemo Project
   success: 
-   - job_template: Test Enable Switch Port
+   - job_template: Webdemo Enable Switch Port
      success: 
-     - job_template: Test Harden Winserver OS
+     - job_template: Webdemo Harden Winserver OS
        failure:
-       - job_template: Test Disable Switch Port
+       - job_template: Webdemo Disable Switch Port
        success:
-       -  job_template: Test Add IIS to Webserver
+       -  job_template: Webdemo Add IIS to Webserver
           failure:
-          - job_template: Test Disable Switch Port
+          - job_template: Webdemo Disable Switch Port
           success:
-          - job_template: Test Add Winserver User
+          - job_template: Webdemo Add Winserver User
             failure:
-            - job_template: Test Disable Switch Port
+            - job_template: Webdemo Disable Switch Port
             always:
-            - job_template: Send New Server Report
+            - job_template: Webdemo Send New Server Report
             

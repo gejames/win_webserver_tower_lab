@@ -7,7 +7,6 @@
     tower:
       cli_config: "./tower/tower-cli.cfg"
       state: present
-   
           
   vars_prompt:
 
@@ -17,8 +16,6 @@
 
     - name: tower_password
       prompt: "What is the Tower password?"
-    
-    
        
   tasks:
 
@@ -28,9 +25,7 @@
       template:
         src: ./tower/templates/tower-cli.j2
         dest: ./tower/tower-cli.cfg
-
-        
-     
+       
     - name: ADD WEBSERVER PROJECT FROM GIT
       tower_project:
         name: "{{ webdemo.project.name }}"
@@ -40,7 +35,6 @@
         scm_update_on_launch: true
         state: "{{ tower.state }}"
         tower_config_file: "{{ tower.cli_config }}"
-
 
     - name: CREATE INVENTORY FOR CISCO SWITCH
       tower_inventory: 
@@ -89,8 +83,6 @@
         tower_config_file: "{{ tower.cli_config }}"
         variables:
           ansible_host: "{{ webdemo.inventory_winserver.winserver_ipaddress }}"
-          ansible_user: Administrator
-          ansible_password: secret
           ansible_connection: winrm
           ansible_winrm_server_cert_validation: ignore
 
@@ -203,7 +195,7 @@
         survey_enabled: yes
         tower_config_file: "{{ tower.cli_config }}"
     
-    # survey is not well documented for the tower_workflow_template module.  
+    # survey is not well supported for the tower_workflow_template module.  
     # As a workaround we will add the workflow survey via the command line tower-cli tool until survey_spec is implemented.
     # This isn't idempotent but shoudln't break anything on multiple playbook runs.
     # tower-cli workflow modify  --name="Test Webdemo Workflow" --survey-spec @./surveys/webdemo_workflow.json -u gejames -p ASK
